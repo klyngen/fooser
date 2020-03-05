@@ -1,0 +1,13 @@
+.centered {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    font-family: 'Montserrat';
+    color: white;
+    font-style: italic;
+    text-align: center;
+  }
+}

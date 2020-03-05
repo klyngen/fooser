@@ -1,0 +1,37 @@
+
+.sub-row {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      color: white;
+      display: flex;
+      justify-content: baseline;
+
+      p {
+        margin: 0 5px 0 0;
+      }
+
+
+      mat-icon {
+        margin-top: 4px;
+      }
+    }
+
+  }
+
+    .sub-row span {
+      transition: all 0.2s ease;
+      padding: 5px 10px 5px 10px;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .sub-row span.active {
+    }
+
+    .sub-row span:hover {
+    }

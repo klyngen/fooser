@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-match',
@@ -21,10 +22,14 @@ export class MatchComponent implements OnInit {
 
   quote: string = 'Spydig quote';
 
-  constructor() {
+  constructor(private router: Router) {
     // Select quote
     const quoteIndex = Math.floor(Math.random() * this.quotes.length);
     this.quote = this.quotes[quoteIndex];
+   }
+
+   register(value: number) {
+    this.router.navigateByUrl(`/match/register?players=${value}`);
    }
 
   ngOnInit(): void {

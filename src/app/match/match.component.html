@@ -1,7 +1,63 @@
 
 <div class="centered">
-  <h1>{{quote}}</h1>
-  <div class="alternatives">
+  <h1><q>{{quote}}</q></h1>
+</div>
+<div class="alternatives">
+  <!--<mat-chip-list>
+    <mat-chip color="primary" selected><p>4-Manns foose</p></mat-chip>
+    <mat-chip color="accent" selected><p>3-Manns foose</p></mat-chip>
+    <mat-chip color="accent"><p>2-Manns foose</p></mat-chip> 
+  </mat-chip-list>-->
 
-  </div>
+  <mat-card class="4-people foos-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"><mat-icon>filter_4</mat-icon></div>
+    <mat-card-title>Full team</mat-card-title>
+    <mat-card-subtitle>Office resource drain</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="/assets/2v2-foos.svg">
+  <mat-card-content>
+    <p>
+      Når du etter lunsj klarer å hente ut nok ressurser til en skikkelig god runde foos
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="register('4')" color="primary">Registrer match</button>
+  </mat-card-actions>
+</mat-card>
+
+  <mat-card class="4-people foos-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"><mat-icon>filter_3</mat-icon></div>
+    <mat-card-title>Third wheel</mat-card-title>
+    <mat-card-subtitle>Chance of dignity loss</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="/assets/2v1-foos.svg">
+  <mat-card-content>
+    <p>
+      Når du etter lunsj klarer å hente ut nok ressurser til en skikkelig god runde foos
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button  (click)="register('3')" color="primary">Registrer match</button>
+  </mat-card-actions>
+</mat-card>
+
+  <mat-card class="4-people foos-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"><mat-icon>filter_2</mat-icon></div>
+    <mat-card-title>Battle</mat-card-title>
+    <mat-card-subtitle>Battle-time</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="/assets/1v1-foos.svg">
+  <mat-card-content>
+    <p>
+      Du skal sette en kollega på plass. Du er litt usikker på om du skal ty til vold eller foos. Du er en mann av en høyere klasse.
+      Du avgjør feider med foos.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="register('2')" mat-raised-button color="primary">Registrer match</button>
+  </mat-card-actions>
+</mat-card>
 </div>

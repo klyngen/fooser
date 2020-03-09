@@ -16,7 +16,8 @@ export class NavbarComponent implements OnInit {
     'Når poweroffice blir for vanskelig',
     'Det finnes bare en ting å gjøre etter lunsj',
     'Noen vil si at det gjør oss effektive',
-    'Som om håndleddene trenger mere trening'
+    'Som om håndleddene trenger mere trening',
+    'Gjør kolleger til fiender'
   ];
 
   quote: string = 'Spydig quote';

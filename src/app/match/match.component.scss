@@ -10,4 +10,33 @@
     font-style: italic;
     text-align: center;
   }
+
+  margin-top: 40px;
 }
+
+.alternatives {
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+
+  mat-chip {
+    height: 46px;
+    p {
+        font-size: x-large;
+        padding: 10px 20px 0px 20px;
+
+      }
+
+  } 
+
+  mat-card {
+    margin: 0px 10px 0px 10px;
+    img {
+      //background-color: rgba(255, 255, 255, 1.0);
+      background-color: #212121;
+    }
+    flex: 1 1 0px;
+  }
+
+}
+

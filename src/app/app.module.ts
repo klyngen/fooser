@@ -10,6 +10,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StatsComponent } from './stats/stats.component';
 import { PlayersComponent } from './players/players.component';
 import { MatchComponent } from './match/match.component';
+import { MatChipsModule } from '@angular/material/chips';
+import {MatCardModule} from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { RegisterComponent } from './match/register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +23,19 @@ import { MatchComponent } from './match/match.component';
     DashboardComponent,
     StatsComponent,
     PlayersComponent,
-    MatchComponent
+    MatchComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     CoreModule,
+    MatIconModule,
     SharedModule,
+    MatChipsModule,
+    MatCardModule,
+    MatButtonModule,
     AppRoutingModule,
+    MatSidenavModule,
     BrowserAnimationsModule
   ],
   providers: [],

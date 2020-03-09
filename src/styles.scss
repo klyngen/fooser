@@ -1,7 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #212121; }
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800i|Roboto:100i&display=swap');
+@import '~@angular/material/theming';
 
+// DEFINING THE THEME OF ALL THEMES
+@include mat-core();
+
+
+$accent: rgb(105, 240, 174);
+$primary: rgb(123, 31, 162);
+$warning: mat-palette($mat-deep-orange);
+
+$my-app-primary: mat-palette($mat-purple);
+$my-app-accent:  mat-palette($mat-green);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-dark-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+$accent: mat-color($my-app-accent);
+$primary: mat-color($my-app-primary);
+
+
+$background: #212121;
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: $background;}

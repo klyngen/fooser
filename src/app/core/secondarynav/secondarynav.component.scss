@@ -1,5 +1,11 @@
 
+@import '../../../styles.scss';
+
 .sub-row {
+    -webkit-box-shadow: inset 0px 0px 24px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 0px 24px 0px rgba(0,0,0,0.75);
+box-shadow: inset 0px 0px 24px 0px rgba(0,0,0,0.75);
+    height: 80px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
 
@@ -30,8 +36,17 @@
       border-radius: 8px;
     }
 
-    .sub-row span.active {
+    .sub-row span a.active {
+      color: $accent;
     }
 
-    .sub-row span:hover {
+    .sub-row span a:hover {
+      color: $accent;
+      transition: 0.5s;
+    }
+
+    .sub-row span a p:hover {
+      color: $accent;
+      text-decoration: underline;
+      transition: 0.5s;
     }

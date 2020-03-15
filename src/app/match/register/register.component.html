@@ -1,1 +1,72 @@
-<p>register works!</p>
+<h1 class="whities">Feilaktig føring er en døds-synd</h1>
+<mat-vertical-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Rødt lag - team curce</ng-template>
+      <mat-form-field>
+        <mat-label>Spiller</mat-label>
+        <input class="whities" matInput placeholder="navn på spiller. Ex Bent" formControlName="firstCtrl" required>
+      </mat-form-field><br>
+      <mat-form-field>
+        <mat-label>Spiller</mat-label>
+        <input class="whities" matInput placeholder="navn på spiller. Ex Bent" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <button class="whities" mat-button matStepperNext>Neste</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Blått lag - team goodluck</ng-template>
+      <mat-form-field>
+        <mat-label>Spiller</mat-label>
+        <input class="whiteis" matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <div>
+        <button class="whities" mat-button matStepperPrevious>Forrige</button>
+        <button class="whities" mat-button matStepperNext>Neste</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+      <ng-template matStepLabel>Stats</ng-template>
+      <form [formGroup]="thirdFormGroup">
+          <h2 class="whities">Blått lag</h2>
+          <mat-slider
+          formControlName="blueslider"
+          matInput
+          [max]="10"
+          [min]="0"
+          [step]="1"
+          [thumbLabel]="1"
+          [tickInterval]="1">
+        </mat-slider>
+
+          <h2 class="whities">Rødt lag</h2>
+          <mat-slider
+            matInput
+            formControlName="redslider"
+            [max]="10"
+            [min]="0"
+            [step]="1"
+            [thumbLabel]="1"
+            [tickInterval]="1">
+          </mat-slider>
+
+      </form>
+      <div>
+        <button class="whities" mat-button matStepperPrevious>Forrige</button>
+        <button class="whities" mat-button matStepperNext>Neste</button>
+      </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Lagre</ng-template>
+    <p class="whities">You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Tilbake</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>

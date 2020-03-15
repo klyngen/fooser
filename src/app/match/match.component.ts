@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-match',
@@ -22,13 +23,14 @@ export class MatchComponent implements OnInit {
 
   quote: string = 'Spydig quote';
 
+
   constructor(private router: Router) {
     // Select quote
     const quoteIndex = Math.floor(Math.random() * this.quotes.length);
     this.quote = this.quotes[quoteIndex];
    }
 
-   register(value: number) {
+   register(value: string) {
     this.router.navigateByUrl(`/match/register?players=${value}`);
    }
 

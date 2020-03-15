@@ -11,11 +11,15 @@ import { StatsComponent } from './stats/stats.component';
 import { PlayersComponent } from './players/players.component';
 import { MatchComponent } from './match/match.component';
 import { MatChipsModule } from '@angular/material/chips';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { RegisterComponent } from './match/register/register.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatInputModule } from '@angular/material/input';
+import { MatSliderModule } from '@angular/material/slider';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,11 @@ import { RegisterComponent } from './match/register/register.component';
     RegisterComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatSliderModule,
+    MatStepperModule,
     BrowserModule,
     CoreModule,
     MatIconModule,
@@ -36,7 +45,8 @@ import { RegisterComponent } from './match/register/register.component';
     MatButtonModule,
     AppRoutingModule,
     MatSidenavModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

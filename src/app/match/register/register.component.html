@@ -3,16 +3,12 @@
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Rødt lag - team curce</ng-template>
-      <mat-form-field>
         <mat-label>Spiller</mat-label>
-        <input class="whities" matInput placeholder="navn på spiller. Ex Bent" formControlName="firstCtrl" required>
-      </mat-form-field><br>
-      <mat-form-field>
+        <shared-player-selector class="whities" formControlName="firstCtrl"></shared-player-selector>
         <mat-label>Spiller</mat-label>
-        <input class="whities" matInput placeholder="navn på spiller. Ex Bent" formControlName="firstCtrl" required>
-      </mat-form-field>
+        <shared-player-selector class="whities" formControlName="firstCtrl" ></shared-player-selector>
       <div>
-        <button class="whities" mat-button matStepperNext>Neste</button>
+        <button class="whities" (click)="subber()" mat-button matStepperNext>Neste</button>
       </div>
     </form>
   </mat-step>

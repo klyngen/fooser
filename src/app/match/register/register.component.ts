@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent implements OnInit, OnChanges {
 
   constructor(private router: Router,
     private route: ActivatedRoute,
@@ -44,4 +44,13 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  ngOnChanges() {
+    console.log(this.firstFormGroup);
+  }
+
+  subber() {
+    console.log(this.firstFormGroup);
+  }
 }
+
+
